@@ -318,7 +318,7 @@ class bitbank(Exchange):
         request = {
             'pair': market['id'],
             'candletype': self.timeframes[timeframe],
-            'yyyymmdd': self.yyyymmdd(since, ''),
+            'yyyymmdd': self.yymmdd(since),
         }
         response = self.publicGetPairCandlestickCandletypeYyyymmdd(self.extend(request, params))
         #
